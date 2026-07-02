@@ -13,6 +13,17 @@ class Sukashi::HtmlEditorTest < ActiveSupport::TestCase
     assert_includes editor.to_html, '<div>sample</div>'
   end
 
+  test 'class付き' do
+    html = <<~HTML
+      <html>
+        <body></body>
+      </html>
+    HTML
+    editor = Sukashi::HtmlEditor.new(html)
+    editor.add_watermark('sample', class: 'foo')
+    assert_includes editor.to_html, '<div class="foo">sample</div>'
+  end
+
   test 'stylesheet追加' do
     html = <<~HTML
       <html>

@@ -7,14 +7,19 @@ module Sukashi
     end
 
     def add_stylesheet(style)
-      css = Nokogiri::XML::Node.new('style', @doc)
-      css['type'] = 'text/css'
-      css.content = style
-      @doc.at('head').add_child(css)
+      node = Nokogiri::XML::Node.new('style', @doc)
+      node['type'] = 'text/css'
+      node.content = style
+      @doc.at('head').add_child(node)
     end
 
-    def add_watermark(text)
-      @doc.at_css('body').add_child("<div>#{text}</div>")
+    def add_watermark(text, **attributes)
+      node = Nokogiri::XML::Node.new('div', @doc)
+      attributes.each do |name, value|
+        node.set_attribute(name, value)
+      end
+      node.content = text
+      @doc.at('body').add_child(node)
     end
 
     def to_html
