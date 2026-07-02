@@ -10,7 +10,9 @@ module Sukashi
     def call(env)
       status, headers, body = @app.call(env)
 
-      if skip?(status, headers)
+      watermark = Sukashi.request.text || Sukashi.config.text
+
+      if skip?(status, headers) || watermark.blank?
         return [status, headers, body]
       end
 
@@ -26,7 +28,7 @@ module Sukashi
 
       editor = Sukashi::HtmlEditor.new(html)
       editor.add_style(CSS)
-      editor.add_watermark(Sukashi.request.text || Sukashi.config.text, class: 'sukashi')
+      editor.add_watermark(watermark, class: 'sukashi')
       new_html = editor.to_html
 
       headers.delete('content-length')
