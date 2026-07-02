@@ -8,17 +8,13 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "sukashi"
+gem 'sukashi', git: 'https://github.com/kmdtmyk/sukashi', ref: '<commit_hash>'
 ```
 
 And then execute:
 ```bash
-$ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install sukashi
+$ bundle install
+$ rails g sukashi:install
 ```
 
 ## Contributing
