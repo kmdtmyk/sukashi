@@ -1,0 +1,9 @@
+.sukashi{
+  position: fixed;
+  top: calc(50vh - 1em);
+  font-size: 200px;
+  transform: rotate(-20deg);
+  opacity: 0.3;
+  font-weight: bold;
+  pointer-events: none;
+}
