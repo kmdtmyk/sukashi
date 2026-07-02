@@ -1,6 +1,7 @@
 require "sukashi/version"
 require "sukashi/railtie"
 require "sukashi/configration"
+require "sukashi/current"
 require "sukashi/middleware"
 require "sukashi/html_editor"
 
@@ -11,6 +12,10 @@ module Sukashi
 
     def config
       @config ||= Sukashi::Configuration.new
+    end
+
+    def request
+      Sukashi::Current
     end
 
   end
