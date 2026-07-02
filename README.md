@@ -1,8 +1,6 @@
 # Sukashi
 Short description and motivation.
 
-## Usage
-How to use my plugin.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -15,6 +13,19 @@ And then execute:
 ```bash
 $ bundle install
 $ rails g sukashi:install
+```
+
+## Usage
+How to use my plugin.
+
+```ruby
+class ExampleController < ApplicationController
+
+  def index
+    Sukashi.request.text = 'request単位で設定したい文字列'
+  end
+
+end
 ```
 
 ## Contributing
