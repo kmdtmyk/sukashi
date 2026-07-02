@@ -6,7 +6,7 @@ module Sukashi
       @doc = Nokogiri::HTML5(html)
     end
 
-    def add_stylesheet(style)
+    def add_style(style)
       node = Nokogiri::XML::Node.new('style', @doc)
       node['type'] = 'text/css'
       node.content = style

@@ -24,14 +24,14 @@ class Sukashi::HtmlEditorTest < ActiveSupport::TestCase
     assert_includes editor.to_html, '<div class="foo">sample</div>'
   end
 
-  test 'stylesheet追加' do
+  test 'stylesタグ追加' do
     html = <<~HTML
       <html>
         <body></body>
       </html>
     HTML
     editor = Sukashi::HtmlEditor.new(html)
-    editor.add_stylesheet('.foo{color:red}')
+    editor.add_style('.foo{color:red}')
     assert_includes editor.to_html, '<style type="text/css">.foo{color:red}</style>'
   end
 
