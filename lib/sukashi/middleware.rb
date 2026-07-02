@@ -26,7 +26,7 @@ module Sukashi
 
       editor = Sukashi::HtmlEditor.new(html)
       editor.add_style(CSS)
-      editor.add_watermark('sample', class: 'sukashi')
+      editor.add_watermark(Sukashi.config.text, class: 'sukashi')
       new_html = editor.to_html
 
       headers.delete('content-length')
