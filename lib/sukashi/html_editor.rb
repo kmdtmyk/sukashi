@@ -10,7 +10,7 @@ module Sukashi
       node = Nokogiri::XML::Node.new('style', @doc)
       node['type'] = 'text/css'
       node.content = style
-      @doc.at('head').add_child(node)
+      @doc.at('head').prepend_child(node)
     end
 
     def add_watermark(text, **attributes)
