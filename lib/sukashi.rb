@@ -14,7 +14,7 @@ module Sukashi
       @config ||= Sukashi::Configuration.new
     end
 
-    def request
+    def request_scope
       Sukashi::Current
     end
 

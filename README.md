@@ -22,7 +22,7 @@ How to use my plugin.
 class ExampleController < ApplicationController
 
   def index
-    Sukashi.request.text = 'request単位で設定したい文字列'
+    Sukashi.request_scope.text = 'request単位で設定したい文字列'
   end
 
 end

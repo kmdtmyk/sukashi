@@ -10,7 +10,7 @@ module Sukashi
     def call(env)
       status, headers, body = @app.call(env)
 
-      watermark = Sukashi.request.text || Sukashi.config.text
+      watermark = Sukashi.request_scope.text || Sukashi.config.text
 
       if skip?(status, headers) || watermark.blank?
         return [status, headers, body]
