@@ -5,9 +5,9 @@ Gem::Specification.new do |spec|
   spec.version     = Sukashi::VERSION
   spec.authors     = [ "" ]
   spec.email       = [ "" ]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Sukashi."
-  spec.description = "TODO: Description of Sukashi."
+  spec.homepage    = "https://github.com/kmdtmyk/sukashi"
+  spec.summary     = "Summary of Sukashi."
+  spec.description = "Description of Sukashi."
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
