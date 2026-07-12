@@ -1,1 +1,1 @@
-Sukashi.config.text = "<%= Sukashi.config.text %>"
+Sukashi.config.text = 'SAMPLE'

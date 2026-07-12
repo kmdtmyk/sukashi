@@ -4,7 +4,6 @@ module Sukashi
     attr_accessor :text
 
     def initialize
-      @text = 'SAMPLE'
     end
 
   end
