@@ -3,20 +3,26 @@ Short description and motivation.
 
 
 ## Installation
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'sukashi', git: 'https://github.com/kmdtmyk/sukashi', ref: '<commit_hash>'
 ```
 
-And then execute:
 ```bash
 $ bundle install
-$ rails g sukashi:install
 ```
 
 ## Usage
-How to use my plugin.
+
+```bash
+$ rails g sukashi:install
+```
+
+```ruby
+# config/initializers/sukashi.rb
+
+Sukashi.config.text = '全ての画面に表示したい文字列'
+```
 
 ```ruby
 class ExampleController < ApplicationController
