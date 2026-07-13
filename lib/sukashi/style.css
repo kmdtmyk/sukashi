@@ -9,6 +9,7 @@
   color: #000;
   opacity: 0.3;
   white-space: pre;
+  z-index: 65535;
   pointer-events: none;
   user-select: none;
 }
